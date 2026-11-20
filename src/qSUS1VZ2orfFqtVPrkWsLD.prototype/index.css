@@ -1,0 +1,173 @@
+/* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE, ABOVE THE TAILWIND IMPORT — DO NOT DELETE THIS COMMENT */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap');
+
+/* CRITICAL: THE FOLLOWING TAILWIND IMPORT MUST NEVER BE DELETED — DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss';
+/* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
+
+@theme {
+  --font-sans: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+  --color-navy: #0f2c5c;
+  --color-navy-deep: #0a1f44;
+  --color-navy-ink: #13254a;
+  --color-gold: #d6a548;
+  --color-gold-light: #f6d98c;
+  --color-backdrop: #0b1a36;
+}
+
+html,
+body {
+  margin: 0;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ---------- Entrance animations (Intersection Observer adds .is-visible) ---------- */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(22px);
+}
+.reveal-up.is-visible {
+  animation: reveal-up 300ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  animation-delay: var(--delay, 0ms);
+}
+@keyframes reveal-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.logo-enter {
+  opacity: 0;
+  transform: scale(0.96);
+  animation: logo-enter 300ms cubic-bezier(0.23, 1, 0.32, 1) 80ms forwards;
+}
+@keyframes logo-enter {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Light reflection that sweeps across the logo, masked to its shape */
+.logo-shine {
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  background: linear-gradient(105deg, transparent 40%, rgba(255, 255, 255, 0.85) 50%, transparent 60%);
+  background-size: 250% 100%;
+  background-position: 150% 0;
+  animation: logo-shine 5.5s linear 0.6s infinite;
+}
+@keyframes logo-shine {
+  0% { background-position: 150% 0; }
+  22% { background-position: -50% 0; }
+  100% { background-position: -50% 0; }
+}
+
+/* Product area: a soft veil lifts to reveal the pipes in the background */
+.product-veil {
+  animation: veil-lift 300ms cubic-bezier(0.23, 1, 0.32, 1) 200ms forwards;
+}
+@keyframes veil-lift {
+  to {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+}
+
+/* ---------- Save contact: special entrance + continuous attention ---------- */
+.save-enter {
+  opacity: 0;
+  transform: translateY(22px) scale(0.96);
+}
+.save-enter.is-visible {
+  animation: save-enter 300ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  animation-delay: var(--delay, 0ms);
+}
+@keyframes save-enter {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.save-btn {
+  animation: save-pulse 2.8s ease-in-out infinite;
+  transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.save-btn:hover {
+  animation-play-state: paused;
+  transform: scale(1.03);
+}
+.save-btn:active {
+  transform: scale(0.97);
+}
+@keyframes save-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 6px 16px -4px rgba(15, 44, 92, 0.45), 0 0 0 0 rgba(37, 99, 235, 0.0);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 10px 26px -6px rgba(15, 44, 92, 0.55), 0 0 22px 2px rgba(59, 130, 246, 0.38);
+  }
+}
+
+.gold-orbit {
+  background: conic-gradient(from 0deg, transparent 0deg, transparent 220deg, #8a6420 260deg, #f6d98c 310deg, #fff4cf 330deg, #d6a548 345deg, transparent 360deg);
+  animation: orbit 3.2s linear infinite;
+}
+@keyframes orbit {
+  to { transform: rotate(360deg); }
+}
+
+.icon-bob {
+  animation: bob 1.6s ease-in-out infinite;
+}
+@keyframes bob {
+  0%, 100% { transform: translateY(-1px); }
+  50% { transform: translateY(2px); }
+}
+
+/* ---------- Card press / hover ---------- */
+.card-press {
+  transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1), box-shadow 200ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+@media (hover: hover) {
+  .card-press:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px -12px rgba(15, 44, 92, 0.45);
+  }
+  .card-press:hover .card-chevron {
+    transform: translateX(3px);
+  }
+}
+.card-press:active {
+  transform: scale(0.98);
+}
+.card-chevron {
+  transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-up,
+  .save-enter,
+  .logo-enter {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+  .logo-shine,
+  .save-btn,
+  .gold-orbit,
+  .icon-bob,
+  .product-veil {
+    animation: none !important;
+  }
+  .product-veil {
+    opacity: 0;
+  }
+}
