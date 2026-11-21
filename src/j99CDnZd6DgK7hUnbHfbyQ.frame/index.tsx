@@ -91,7 +91,8 @@ export const args = {
   phone: '+91 89096 17777',
   email: 'sstubesindia@gmail.com',
   website: 'www.sstubesindia.com',
-  productsUrl: 'https://www.sstubesindia.com/products',
+  productsUrl:
+    'https://www.sstubesindia.com/#:~:text=Stainless%20Steel%20Pipes',
   location: 'Visakhapatnam, Andhra Pradesh, India',
 }
 
