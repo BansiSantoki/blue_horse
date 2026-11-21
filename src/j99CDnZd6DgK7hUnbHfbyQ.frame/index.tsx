@@ -46,7 +46,11 @@ export default function ContactCard(props: Props) {
               index={1}
               href={productsUrl}
               external
-              icon={<PipesIcon className="h-8 w-8" />}
+              icon={
+                <span className="flex h-10 w-10 items-center justify-center rounded-[9px] border border-white/35 bg-[#09285a] shadow-[0_4px_10px_rgba(0,0,0,0.18)]">
+                  <PipesIcon className="h-7 w-7" />
+                </span>
+              }
               title="Our Products"
               lines={['Explore Our Stainless', 'Steel Pipes & Tubes']}
             />

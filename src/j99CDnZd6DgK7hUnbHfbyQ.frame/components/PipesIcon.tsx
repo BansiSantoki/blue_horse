@@ -7,27 +7,25 @@ export function PipesIcon({ className = '' }: { className?: string }) {
       viewBox="0 0 32 32"
       fill="none"
       stroke="currentColor"
-      strokeWidth={1.5}
+      strokeWidth={1.35}
       strokeLinecap="round"
       strokeLinejoin="round"
       className={className}
       aria-hidden
     >
-      {/* pipe bodies running up-right */}
-      <path d="M8.5 19.5 L19 9" />
-      <path d="M11 25.5 L24.5 12" />
-      <path d="M16.5 26 L27 15.5" />
-      <path d="M4 17 L16 5" />
-      {/* far ends */}
-      <ellipse cx="21.6" cy="9.6" rx="2.4" ry="3.6" transform="rotate(45 21.6 9.6)" />
-      <ellipse cx="26.1" cy="14.1" rx="2.4" ry="3.6" transform="rotate(45 26.1 14.1)" />
-      {/* near pipe mouths */}
-      <circle cx="7" cy="21" r="3.6" />
-      <circle cx="7" cy="21" r="1.4" />
-      <circle cx="13.5" cy="23.5" r="3.6" />
-      <circle cx="13.5" cy="23.5" r="1.4" />
-      <circle cx="10" cy="15.5" r="3.6" />
-      <circle cx="10" cy="15.5" r="1.4" />
+      {/* Three stainless pipes, matching the compact app-icon reference. */}
+      <path d="M13.5 20.5 L21.5 12.5" />
+      <path d="M18.5 23.5 L26.5 15.5" />
+      <path d="M9 17 L17 9" />
+      <ellipse cx="21.5" cy="12.5" rx="2.2" ry="3.2" transform="rotate(45 21.5 12.5)" />
+      <ellipse cx="26.5" cy="15.5" rx="2.2" ry="3.2" transform="rotate(45 26.5 15.5)" />
+      <ellipse cx="17" cy="9" rx="2.2" ry="3.2" transform="rotate(45 17 9)" />
+      <circle cx="12.5" cy="21.5" r="3.5" />
+      <circle cx="12.5" cy="21.5" r="1.35" />
+      <circle cx="17.5" cy="24.5" r="3.5" />
+      <circle cx="17.5" cy="24.5" r="1.35" />
+      <circle cx="8" cy="18" r="3.5" />
+      <circle cx="8" cy="18" r="1.35" />
     </svg>
   )
 }
