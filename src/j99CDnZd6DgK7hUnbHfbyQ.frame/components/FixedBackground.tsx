@@ -21,7 +21,7 @@ export function FixedBackground() {
   return (
     <div
       aria-hidden
-      className="pointer-events-none fixed left-0 top-0 z-0 w-full overflow-hidden [backface-visibility:hidden] [contain:paint]"
+      className="pointer-events-none fixed left-0 top-0 z-0 w-full overflow-hidden"
       style={{ height: lockedHeight }}
     >
       {/* Desktop backdrop, only visible outside the centred card */}

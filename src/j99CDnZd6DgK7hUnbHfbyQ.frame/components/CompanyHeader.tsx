@@ -14,7 +14,6 @@ export function CompanyHeader() {
           alt={`${COMPANY_NAME} — ${BRAND_NAME}® logo`}
           className="block h-auto w-full select-none mix-blend-multiply"
           loading="eager"
-          fetchPriority="high"
           decoding="sync"
           draggable={false}
         />

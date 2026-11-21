@@ -20,7 +20,7 @@ export function ContactCard({ index, href, external, icon, title, lines }: Conta
       ref={ref}
       href={href}
       {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-      className={`reveal-up card-press group relative flex min-h-[66px] items-stretch overflow-hidden rounded-[18px] border border-white/90 bg-white/75 shadow-[0_8px_22px_-10px_rgba(15,44,92,0.38),inset_0_1px_0_rgba(255,255,255,0.9)] backdrop-blur-md outline-none focus-visible:ring-2 focus-visible:ring-navy ${
+      className={`reveal-up card-press group relative flex min-h-[clamp(48px,8.2dvh,62px)] items-stretch overflow-hidden rounded-[18px] border border-white/90 bg-white/75 shadow-[0_8px_22px_-10px_rgba(15,44,92,0.38),inset_0_1px_0_rgba(255,255,255,0.9)] backdrop-blur-md outline-none focus-visible:ring-2 focus-visible:ring-navy ${
         visible ? 'is-visible' : ''
       }`}
       style={{ ['--delay' as string]: `${Math.min(index, 3) * 60}ms` }}
@@ -29,12 +29,12 @@ export function ContactCard({ index, href, external, icon, title, lines }: Conta
 
       <span aria-hidden className="my-auto ml-2 h-7 w-[1.5px] shrink-0 rounded-full bg-navy" />
 
-      <span className="flex min-w-0 flex-1 flex-col justify-center py-2.5 pl-4 pr-1">
-        <span className="text-[17px] font-bold leading-tight tracking-[-0.01em] text-navy-deep sm:text-[18px]">
+      <span className="flex min-w-0 flex-1 flex-col justify-center py-[clamp(3px,0.75dvh,7px)] pl-4 pr-1">
+        <span className="text-[clamp(14px,4.2vw,17px)] font-bold leading-tight tracking-[-0.01em] text-navy-deep sm:text-[18px]">
           {title}
         </span>
         {lines.map((line) => (
-          <span key={line} className="break-words text-[13.5px] font-medium leading-snug text-navy-ink sm:text-[14.5px]">
+          <span key={line} className="break-words text-[clamp(11px,3.5vw,13.5px)] font-medium leading-snug text-navy-ink sm:text-[14.5px]">
             {line}
           </span>
         ))}
