@@ -8,7 +8,7 @@ export function ProductDisplay() {
   return (
     <section
       aria-label="Stainless steel pipes and tubes"
-      className="relative -mx-[5%] min-h-[clamp(60px,13dvh,90px)] flex-1"
+      className="relative -mx-[5%] min-h-[clamp(38px,7dvh,75px)] flex-1"
     >
       <div
         aria-hidden

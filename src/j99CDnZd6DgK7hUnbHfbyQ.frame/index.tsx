@@ -5,6 +5,7 @@ import { FixedBackground } from './components/FixedBackground'
 import { CompanyHeader } from './components/CompanyHeader'
 import { ProductDisplay } from './components/ProductDisplay'
 import { ContactCard as InfoCard } from './components/ContactCard'
+import { SaveContactCard } from './components/SaveContactCard'
 import { PipesIcon } from './components/PipesIcon'
 
 type Props = Partial<typeof args>
@@ -27,13 +28,13 @@ export default function ContactCard(props: Props) {
           {/* Header + pipes area ends where the gold curve sweeps under the pipes in the fixed background */}
           <div
             className="flex shrink-0 flex-col"
-            style={{ height: 'clamp(205px, 42dvh, 340px)' }}
+            style={{ height: 'clamp(175px, 32dvh, 300px)' }}
           >
             <CompanyHeader />
             <ProductDisplay />
           </div>
 
-          <div className="flex min-h-0 flex-col gap-[clamp(5px,1.2dvh,10px)]">
+          <div className="flex min-h-0 flex-col gap-[clamp(3px,0.7dvh,6px)]">
             <InfoCard
               index={0}
               href={telHref}
@@ -71,6 +72,13 @@ export default function ContactCard(props: Props) {
               icon={<Globe strokeWidth={1.6} className="h-7 w-7" />}
               title="Our Website"
               lines={[website]}
+            />
+            <SaveContactCard
+              index={5}
+              phone={phone}
+              email={email}
+              website={siteHref}
+              location={location}
             />
           </div>
         </main>

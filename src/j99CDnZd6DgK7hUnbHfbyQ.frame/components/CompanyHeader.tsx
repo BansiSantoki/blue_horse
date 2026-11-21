@@ -4,7 +4,7 @@ import { LOGO_URL, COMPANY_NAME, BRAND_NAME } from './assets'
 /** The exact supplied logo: fade + slight scale-in, then an occasional light sweep. */
 export function CompanyHeader() {
   return (
-    <header className="pt-[clamp(28px,6vh,48px)]">
+    <header className="pt-[clamp(18px,5dvh,42px)]">
       <h1 className="sr-only">
         {COMPANY_NAME} — {BRAND_NAME}®
       </h1>
