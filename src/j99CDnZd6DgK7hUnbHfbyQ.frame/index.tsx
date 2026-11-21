@@ -21,7 +21,7 @@ export default function ContactCard(props: Props) {
   const [city, ...region] = location.split(',')
 
   return (
-    <div className="relative min-h-full w-full overflow-x-hidden font-sans text-navy-ink">
+    <div className="relative min-h-[100dvh] w-full overflow-x-hidden font-sans text-navy-ink">
       <FixedBackground />
 
       <main className="relative z-10 mx-auto flex w-full max-w-[440px] flex-col px-[4.5%]">
