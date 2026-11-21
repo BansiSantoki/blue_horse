@@ -28,7 +28,7 @@ export default function ContactCard(props: Props) {
           {/* Header + pipes area ends where the gold curve sweeps under the pipes in the fixed background */}
           <div
             className="flex shrink-0 flex-col"
-            style={{ height: 'clamp(175px, calc(36dvh + 1px), 300px)' }}
+            style={{ height: 'clamp(195px, calc(40dvh + 5px), 320px)' }}
           >
             <CompanyHeader />
             <ProductDisplay />
