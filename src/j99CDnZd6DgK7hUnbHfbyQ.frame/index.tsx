@@ -6,7 +6,6 @@ import { CompanyHeader } from './components/CompanyHeader'
 import { ProductDisplay } from './components/ProductDisplay'
 import { ContactCard as InfoCard } from './components/ContactCard'
 import { SaveContactCard } from './components/SaveContactCard'
-import { Footer } from './components/Footer'
 import { PipesIcon } from './components/PipesIcon'
 
 type Props = Partial<typeof args>
@@ -82,7 +81,6 @@ export default function ContactCard(props: Props) {
           />
         </div>
 
-        <Footer />
       </main>
     </div>
   )
