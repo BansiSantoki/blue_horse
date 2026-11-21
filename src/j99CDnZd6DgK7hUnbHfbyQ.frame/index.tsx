@@ -28,13 +28,13 @@ export default function ContactCard(props: Props) {
           {/* Header + pipes area ends where the gold curve sweeps under the pipes in the fixed background */}
           <div
             className="flex shrink-0 flex-col"
-            style={{ height: 'clamp(175px, calc(36dvh - 5px), 300px)' }}
+            style={{ height: 'clamp(175px, calc(36dvh + 1px), 300px)' }}
           >
             <CompanyHeader />
             <ProductDisplay />
           </div>
 
-          <div className="flex min-h-0 flex-col gap-[clamp(3px,0.7dvh,6px)]">
+          <div className="flex min-h-0 flex-col gap-[clamp(2px,0.5dvh,5px)]">
             <InfoCard
               index={0}
               href={telHref}

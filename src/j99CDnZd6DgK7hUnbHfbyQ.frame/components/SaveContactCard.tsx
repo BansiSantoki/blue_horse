@@ -45,7 +45,7 @@ export function SaveContactCard({ index, phone, email, website, location }: Save
         </div>
       </div>
 
-      <div className="px-2 pb-2 pt-1">
+      <div className="px-2 pb-1.5 pt-0.5">
         <button
           type="button"
           onClick={handleSave}
