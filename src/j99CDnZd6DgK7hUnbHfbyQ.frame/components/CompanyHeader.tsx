@@ -8,11 +8,14 @@ export function CompanyHeader() {
       <h1 className="sr-only">
         {COMPANY_NAME} — {BRAND_NAME}®
       </h1>
-      <div className="logo-enter relative mx-auto w-[94%] overflow-hidden">
+      <div className="relative mx-auto w-[94%] overflow-hidden">
         <img
           src={LOGO_URL}
           alt={`${COMPANY_NAME} — ${BRAND_NAME}® logo`}
           className="block h-auto w-full select-none mix-blend-multiply"
+          loading="eager"
+          fetchPriority="high"
+          decoding="sync"
           draggable={false}
         />
         <div aria-hidden className="logo-shine absolute inset-0 mix-blend-soft-light" />
